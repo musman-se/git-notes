@@ -2,8 +2,8 @@
 import Input from "./Input"
 import Button from "./Button";
 
-import emumbaLogo from '../assets/emumba.svg'
-import magnifyLogo from '../assets/magnify.svg'
+import EmumbaLogo from '../assets/emumba.svg?react'
+import MagnifyLogo from '../assets/magnify.svg?react'
 
 const Navbar = () => {
     return (
@@ -12,10 +12,10 @@ const Navbar = () => {
             md:flex-row md:items-center md:gap-0 justify-between md:py-5 md:px-8
         '>
             <div>
-                <img src={emumbaLogo} alt='Emumba logo' />
+                <EmumbaLogo className="text-white" />
             </div>
             <div className="flex justify-between items-center gap-8 md:justify-start">
-                <Input icon={magnifyLogo} placeholder="Search gists..." value="" onChange={() => {}} />
+                <Input Icon={MagnifyLogo} placeholder="Search gists..." value="" onChange={() => {}} />
                 <Button text='Login' size="sm" color="white" />
             </div>
         </div>
