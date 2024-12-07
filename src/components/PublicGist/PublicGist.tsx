@@ -18,10 +18,9 @@ type LayoutType = 'list' | 'grid'
 const PublicGist = ({}: PublicGistProps) => {
     const [layoutType, setLayoutType] = useState<LayoutType>('list')
 
-
     return (
         <>
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center mb-5">
                 <h1 className="text-2xl font-normal text-[#3D3D3D]">Public Gists</h1>
 
                 <div className="flex items-center">
