@@ -47,16 +47,17 @@ const ListView = ({}: ListViewProps) => {
     ])
 
     const colDefs: ColDef<RowData>[] = useMemo(() => [
-        { field: "make", headerName: 'Name', cellRenderer: CellAvatar, cellStyle },
-        { field: "model", headerName: 'Notebook Name', cellRenderer: CellBadge, cellStyle },
+        { field: "make", headerName: 'Name', cellRenderer: CellAvatar },
+        { field: "model", headerName: 'Notebook Name', cellRenderer: CellBadge },
         { field: "price", headerName: 'Keyword' },
         { field: "electric", headerName: 'Updated' },
-        { field: "electric", headerName: '', cellRenderer: CellAction, cellStyle, maxWidth: 120 },
+        { field: "electric", headerName: '', cellRenderer: CellAction, maxWidth: 120 },
     ], []);
 
     const defaultColDef = {
         flex: 1,
         resizable: false,
+        cellStyle
     };
 
     return (
@@ -68,6 +69,7 @@ const ListView = ({}: ListViewProps) => {
                 pagination
                 paginationPageSize={10}
                 paginationPageSizeSelector={[10, 20, 50, 100]}
+                rowHeight={70}
             />
         </div>
     )
