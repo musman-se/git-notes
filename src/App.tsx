@@ -1,7 +1,12 @@
+// Internal Dependencies
+import Navbar from "./components/Navbar"
+
 const App = () => {
 
   return (
-    <h1>App</h1>
+    <div>
+      <Navbar />
+    </div>
   )
 }
 
