@@ -1,7 +1,9 @@
 // Intenral Dependencies
 import Input from "./Input"
-import emumbaLogo from '../assets/emumba.svg'
 import Button from "./Button";
+
+import emumbaLogo from '../assets/emumba.svg'
+import magnifyLogo from '../assets/magnify.svg'
 
 const Navbar = () => {
     return (
@@ -13,7 +15,7 @@ const Navbar = () => {
                 <img src={emumbaLogo} alt='Emumba logo' />
             </div>
             <div className="flex justify-between items-center gap-8 md:justify-start">
-                <Input placeholder="Search gists..." value="" onChange={() => {}} />
+                <Input icon={magnifyLogo} placeholder="Search gists..." value="" onChange={() => {}} />
                 <Button text='Login' size="sm" color="white" />
             </div>
         </div>
