@@ -9,6 +9,10 @@ export type PublicGist = {
     html_url: string;
     files: {
         [key: string]: {
+            filename?: string;
+            type?: string;
+            language?: string;
+            raw_url?: string;
             size?: number;
         };
     };
@@ -37,9 +41,10 @@ export type PublicGist = {
         events_url: string;
         received_events_url: string;
         type: string;
+        user_view_type: string;
         site_admin: boolean;
     };
     truncated: boolean;
 };
 
-export type PublicGists = PublicGist[]
+export type PublicGists = PublicGist[];
