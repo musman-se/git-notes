@@ -1,11 +1,12 @@
 type AvatarProps = {
+    className?: string,
     src: string
 }
 
-const Avatar = ({ src }: AvatarProps) => {
+const Avatar = ({ className, src }: AvatarProps) => {
     return (
         <div>
-            <img src={src} className="w-8 h-8 rounded-full" alt='avatar' />
+            <img src={src} className={`rounded-full ${className}`} alt='avatar' />
         </div>
     )
 }

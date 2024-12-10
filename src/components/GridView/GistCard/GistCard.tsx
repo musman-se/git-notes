@@ -11,13 +11,14 @@ import GistCardFooter from './GistCardFooter/GistCardFooter'
 import GistCardBadge from './GistCardBadge/GistCardBadge'
 
 type GistCardProps = {
-    gist: PublicGist
+    className?: string,
+    gist?: PublicGist
 }
 
-const GistCard = ({ gist }) => {
+const GistCard = ({ className }: GistCardProps) => {
     const [isMouseOverCard, setIsMouseOverCard] = useState(false)
 
-    const editorDidMount = (editor) => {
+    const editorDidMount = (editor: any) => {
         setTimeout(function() {
             editor.getAction('editor.action.formatDocument').run();
         }, 300);
@@ -32,7 +33,7 @@ const GistCard = ({ gist }) => {
     }
 
     return (
-        <div className="border border-[#EFEFEF] rounded-md max-w-[384px]" onMouseEnter={onMouseEnterHandler} onMouseLeave={onMouseLeaveHandler}>
+        <div className={`border border-lightGray rounded-md max-w-[384px] ${className}`} onMouseEnter={onMouseEnterHandler} onMouseLeave={onMouseLeaveHandler}>
             <div className={`relative border rounded-t-md ${isMouseOverCard ? 'border-darkGreen' : 'border-transparent'}`}>
                 { isMouseOverCard && <GistCardBadge text='vercel_package.json' /> }
                 
