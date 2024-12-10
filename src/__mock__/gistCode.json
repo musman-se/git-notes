@@ -1,0 +1,36 @@
+{
+    "good2": {
+      "find": {
+        "logo": "images/index/logo.png",
+        "text": "探索新生活"
+      },
+      "lunch": {
+        "items": [
+          {
+            "description": "美度 透明背底 手表",
+            "image": "images/index/w1.webp"
+          },
+          {
+            "description": "浪琴军旗机械表",
+            "image": "images/index/w2.webp"
+          },
+          {
+            "description": "闪迪 固态闪存盘",
+            "image": "images/index/w3.webp"
+          },
+          {
+            "description": "TCL 全高清 智能电视机",
+            "image": "images/index/w4.webp"
+          },
+          {
+            "description": "Bose 扬声器系统",
+            "image": "images/index/w5.webp"
+          },
+          {
+            "description": "金士顿高速移动优盘",
+            "image": "images/index/w6.webp"
+          }
+        ]
+      }
+    }
+  }

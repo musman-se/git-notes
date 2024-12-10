@@ -7,7 +7,7 @@ import ListView from "../ListView"
 import NoteIcon from '../../assets/note.svg?react'
 import ListUnorderedIcon from '../../assets/list-unordered.svg?react'
 import GistIconWrapper from '../common/GistIconWrapper'
-
+import GridView from '../GridView/GridView'
 
 type PublicGistProps = {
     // ...
@@ -16,7 +16,7 @@ type PublicGistProps = {
 type LayoutType = 'list' | 'grid'
 
 const PublicGist = ({}: PublicGistProps) => {
-    const [layoutType, setLayoutType] = useState<LayoutType>('list')
+    const [layoutType, setLayoutType] = useState<LayoutType>('grid')
 
     return (
         <>
@@ -39,7 +39,7 @@ const PublicGist = ({}: PublicGistProps) => {
                 </div>
             </div>
 
-            <ListView />
+            { layoutType === 'list' ? <ListView /> : <GridView /> }
         </>
     )
 }
