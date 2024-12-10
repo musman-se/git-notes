@@ -32,9 +32,10 @@ const GistCard = ({ gist }) => {
     }
 
     return (
-        <div className="border border-[#EFEFEF] rounded-md min-w-[384px]" onMouseEnter={onMouseEnterHandler} onMouseLeave={onMouseLeaveHandler}>
+        <div className="border border-[#EFEFEF] rounded-md max-w-[384px]" onMouseEnter={onMouseEnterHandler} onMouseLeave={onMouseLeaveHandler}>
             <div className={`relative border rounded-t-md ${isMouseOverCard ? 'border-darkGreen' : 'border-transparent'}`}>
                 { isMouseOverCard && <GistCardBadge text='vercel_package.json' /> }
+                
                 <Editor
                     height={182}
                     width={'100%'}
@@ -44,14 +45,15 @@ const GistCard = ({ gist }) => {
                     theme='vs-light'
                     options={{
                         minimap: {
-                            enabled: false
+                            enabled: false,
                         },
-                        readOnly: true,
+                        // @ts-ignore
+                        renderIndentGuides: false
                     }}
                 />
             </div>
             
-            <GistCardFooter />
+            <GistCardFooter isMouseOverCard={isMouseOverCard} />
         </div>
     )
 }
