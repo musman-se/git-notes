@@ -1,11 +1,12 @@
 type AvatarProps = {
     className?: string,
-    src: string
+    src: string,
+    onClick: () => void
 }
 
-const Avatar = ({ className, src }: AvatarProps) => {
+const Avatar = ({ className, src, onClick }: AvatarProps) => {
     return (
-        <div>
+        <div onClick={onClick}>
             <img src={src} className={`rounded-full ${className}`} alt='avatar' />
         </div>
     )
