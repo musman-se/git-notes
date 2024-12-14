@@ -1,9 +1,13 @@
 // Internal Dependencies
 import Button from "../Button";
 
-const Dropdown = () => {
+type DropdownProps = {
+    className?: string
+}
+
+const Dropdown = ({ className }: DropdownProps) => {
     return (
-        <div className="shadow-custom rounded-md p-2.5 w-40">
+        <div className={`shadow-custom rounded-md p-2.5 w-40 bg-white z-50 ${className}`}>
             <p className="text-[11px] text-darkGray">Signed in as</p>
             <p className="text-sm text-darkGreen font-bold">John Doe</p>
             <hr className="my-2.5 text-lightGray" />
