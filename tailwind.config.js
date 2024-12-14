@@ -11,6 +11,7 @@ export default {
         darkGray: '#3D3D3D',
         lightGray: '#EFEFEF',
         lighterGray: '#E3E3E3',
+        lightestGray: '#C4C4C4',
         mediumGray: '#B7B7B7',
         gray: '#A3A3A3',
         green: '#059411',
