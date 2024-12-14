@@ -17,7 +17,10 @@ export default {
         blue: '#0072D1',
         darkSilver: '#7A7A7A',
         skyBlue: '#00A3FF', 
-      }
+      },
+      boxShadow: {
+        'custom': 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px',
+      },
     },
   },
   plugins: [],

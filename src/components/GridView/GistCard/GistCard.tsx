@@ -33,7 +33,7 @@ const GistCard = ({ className }: GistCardProps) => {
     }
 
     return (
-        <div className={`border border-lightGray rounded-md max-w-[384px] ${className}`} onMouseEnter={onMouseEnterHandler} onMouseLeave={onMouseLeaveHandler}>
+        <div className={`border border-lightGray rounded-md max-w-full ${className}`} onMouseEnter={onMouseEnterHandler} onMouseLeave={onMouseLeaveHandler}>
             <div className={`relative border rounded-t-md ${isMouseOverCard ? 'border-darkGreen' : 'border-transparent'}`}>
                 { isMouseOverCard && <GistCardBadge text='vercel_package.json' /> }
                 
