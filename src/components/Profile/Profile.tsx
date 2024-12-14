@@ -2,6 +2,7 @@ import Avatar from '../ListView/Cell/CellAvatar/Avatar'
 import Button from '../Button'
 import CellBadge from '../ListView/Cell/CellBadge/CellBadge'
 import GistCard from '../GridView/GistCard/GistCard'
+import Pagination from '../common/Pagination'
 
 import ProfileImage from '../../assets/profile.png'
 import * as publicGists from '../../__mock__/publicGists.json'
@@ -27,6 +28,7 @@ const Profile = () => {
                     <GistCard gist={publicGist} className='max-w-full' />
                     <GistCard gist={publicGist} className='max-w-full' />
                 </div>
+                <Pagination currentPage={1} totalPage={14} />
             </div>
         </div>
     )
