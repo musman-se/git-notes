@@ -8,14 +8,14 @@ const button = tv({
       color: {
         white: 'font-semibold bg-white text-darkGreen',
         primary: 'font-semibold bg-darkGreen text-white',
-        secondary: 'bg-purple-500 text-white',
+        secondary: 'font-semibold bg-lightGray text-darkGreen',
         plain: "bg-transparent text-darkGreen"
       },
       size: {
         sm: 'text-sm',
         md: 'text-base',
         lg: 'text-lg'
-      }
+      },
     },
 });
 
@@ -23,12 +23,14 @@ type ButtonProps = {
     text: string,
     size: 'sm' | 'md' | 'lg',
     color: 'white' | 'primary' | 'secondary' | 'plain',
-    className?: string
+    className?: string,
+    type?: React.ButtonHTMLAttributes<HTMLButtonElement>['type'],
+    disabled?: boolean
 }
 
-const Button = ({ text, size, color, className }: ButtonProps) => {
+const Button = ({ type = 'button', text, size, color, disabled = false, className }: ButtonProps) => {
     return (
-        <button className={classNames(button({ size, color }), className)}>
+        <button className={classNames(button({ size, color }), className)} type={type} disabled={disabled}>
           {text}
         </button>
     )
