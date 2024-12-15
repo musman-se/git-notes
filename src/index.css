@@ -14,11 +14,15 @@
 }
 
 /* Monaco Editor Styles */
-.monaco-editor, .overflow-guard {
-    border-top-left-radius: 0.375rem !important /* 6px */;
-    border-top-right-radius: 0.375rem !important /* 6px */;
+.gist-card .monaco-editor, .overflow-guard {
+    border-top-left-radius: 0.375rem !important;
+    border-top-right-radius: 0.375rem !important;
 }
 
-.monaco-editor-background, .margin-view-overlays {
+.gist-card .monaco-editor-background, .margin-view-overlays {
     background-color: #FAFAFA !important;
+}
+
+.file-input .monaco-editor-background, .margin-view-overlays {
+    background-color: #FFFFFF !important;
 }
