@@ -1,7 +1,7 @@
 type AvatarProps = {
     className?: string,
     src: string,
-    onClick: () => void
+    onClick?: () => void
 }
 
 const Avatar = ({ className, src, onClick }: AvatarProps) => {

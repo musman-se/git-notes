@@ -1,3 +1,4 @@
+// Internal Dependencies
 import Avatar from '../ListView/Cell/CellAvatar/Avatar'
 import Button from '../Button'
 import CellBadge from '../ListView/Cell/CellBadge/CellBadge'
